@@ -1,8 +1,8 @@
 {
   "name": "twinkle-site",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A website for a Savannah-based retaile store, Twinkle",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/katophelix/Twinkle-Site.git"
   },
-  "author": "",
+  "author": "Kat Harris, Jennifer Campbell, Bob Brown",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/katophelix/Twinkle-Site/issues"
@@ -18,9 +18,10 @@
   "homepage": "https://github.com/katophelix/Twinkle-Site#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.2",
-    "sequelize": "^4.37.0"
+    "sequelize": "^4.36.1"
   }
 }

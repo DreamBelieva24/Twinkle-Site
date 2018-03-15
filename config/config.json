@@ -2,6 +2,7 @@
   "development": {
     "username": "root",
     "password": "root",
+
     "database": "twinkle_db",
     "host": "localhost",
     "dialect": "mysql",
