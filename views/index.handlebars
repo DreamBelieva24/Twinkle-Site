@@ -1,0 +1,51 @@
+
+<div class="row">
+  <div class="col-md-6">
+    <h2>Burgers to choose from!</h2>
+
+    <ul>
+      {{#each burgers}} {{#unless devour}}
+      <li>{{burger_name}}
+
+        <form action="/{{this.id}}" method="POST">
+          <button class="devour" data-id="{{this.id}}">Devour!</button>
+          {{!--
+          <input type="submit" value="Submit"> --}}
+        </form>
+
+      </li>
+      {{/unless}} 
+      {{/each}}
+    </ul>
+
+  </div>
+
+
+  <div class="col-md-6">
+    <h2>Burgers that are eaten!</h2>
+
+    <ul>
+      {{#each burgers}} {{#if devour}}
+      <li>{{burger_name}}
+      </li>
+      {{/if}} {{/each}}
+    </ul>
+  </div>
+</div>
+
+
+
+<footer>
+<h2>Add a Burger</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Burger Name:</label>
+    <input type="text" id="ca" name="burger_name">
+  </div>
+
+
+
+  <button type="submit">Add Burger</button>
+</form>
+</footer>
