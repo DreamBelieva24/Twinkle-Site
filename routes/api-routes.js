@@ -1,28 +1,28 @@
-var db = require("../models");
+var db = require("../Models");
 
 module.exports = function (app) {
 
     //getItemsFromDB is just a stand in function until we have the models ready
     app.get("/shop", function (req, res) {
-        db.products.findAll({}).then(data => {
+        db.Inventory.findAll({}).then(data => {
             let allProductsForHandlebars = {
                 product: data
             }
-            res.render("shop", allProductsForHandlebars);
+            res.json(allProductsForHandlebars);
         })
     });
 
     app.get("/shop/:id", function (req, res) {
-        let param = req.params.product_id;
-        res.products.findOne({
+        let param = req.params.id;
+        db.Inventory.findOne({
             where: {
-                product_id: param
+                id: param
             }
         }).then( (data) => {
             let specificProduct = {
                 product: data
             }
-            res.render("modalView", specificProduct);
+            res.json(specificProduct);
         })
     });
 
