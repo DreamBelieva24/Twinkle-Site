@@ -27,7 +27,9 @@ module.exports = function (app) {
     });
 
     app.post("/contact", function (req, res) {
-        let contactInfo = req.body.contact;
-        db.contact.create(req.body.contact);
+        console.log(req.body);
+        let contactInfo = req.body;
+        db.CustomerInfo.create(req.body);
+        res.json(contactInfo);
     });
 }
