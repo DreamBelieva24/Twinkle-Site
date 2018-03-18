@@ -2,7 +2,7 @@ var db = require("../Models");
 
 module.exports = function (app) {
 
-    //is just a stand in function until we have the models ready
+    //just a stand in function until we have the models ready
     app.get("/shop", function (req, res) {
         db.Inventory.findAll({}).then(data => {
             let allProductsForHandlebars = {
