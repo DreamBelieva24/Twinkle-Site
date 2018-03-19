@@ -1,24 +1,33 @@
 var db = require("../models");
 
-// module.exports = function(app) {
+module.exports = function (app) {
 
-//     // GET route for getting all of the todos
-//     app.get("/api/todos", function(req, res) {
-  
-//     });
-  
-//     // POST route for saving a new todo. You can create a todo using the data on req.body
-//     app.post("/api/todos", function(req, res) {
-  
-//     });
-  
-//     // DELETE route for deleting todos. You can access the todo's id in req.params.id
-//     app.delete("/api/todos/:id", function(req, res) {
-  
-//     });
-  
-//     // PUT route for updating todos. The updated todo will be available in req.body
-//     app.put("/api/todos", function(req, res) {
-  
-//     });
-//   };
+    //getItemsFromDB is just a stand in function until we have the models ready
+    app.get("/shop", function (req, res) {
+        db.products.findAll({}).then(data => {
+            let allProductsForHandlebars = {
+                product: data
+            }
+            res.render("shop", allProductsForHandlebars);
+        })
+    });
+
+    app.get("/shop/:id", function (req, res) {
+        let param = req.params.product_id;
+        res.products.findOne({
+            where: {
+                product_id: param
+            }
+        }).then( (data) => {
+            let specificProduct = {
+                product: data
+            }
+            res.render("modalView", specificProduct);
+        })
+    });
+
+    app.post("/contact", function (req, res) {
+        let contactInfo = req.body.contact;
+        db.contact.create(req.body.contact);
+    });
+}

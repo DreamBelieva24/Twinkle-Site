@@ -7,7 +7,7 @@ main {
     flex: 1 0 auto;
 }
 
-nav ul a {
+.waves-effect {
     font-size: 28px;
 }
    input {
@@ -25,4 +25,31 @@ body.contact-body {
     background-image: url("../images/Store3.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+=======
+
+.brand-logo {
+    width: 15%;
+    margin-left: 35px;
+   
+
+}
+
+nav ul a.btn-large {
+    margin-top: 20px;
+    
+}
+
+
+.carousel .carousel-item {
+    width:500px !important;
+}
+.carousel {
+    height:500px;
+}
+
+@media only screen and (min-width: 601px){
+    nav {
+        height: 95px;
+    } 
+
 }
