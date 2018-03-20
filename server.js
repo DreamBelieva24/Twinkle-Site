@@ -20,9 +20,9 @@ var db = require("./models");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const expHbs = require("express-handlebars");
-app.engine("handlebars", expHbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
+// const expHbs = require("express-handlebars");
+// app.engine("handlebars", expHbs({ defaultLayout: "main" }));
+// app.set("view engine", "handlebars");
 
 // Static directory
 app.use(express.static("public"));
