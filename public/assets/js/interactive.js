@@ -1,6 +1,5 @@
 $(document).ready(function(){
 $("#contact-button").on("click", function () {
-    console.log("hi")
     let newContact = {
         first_name: $("#first_name").val(),
         last_name: $("#last_name").val(),
@@ -10,7 +9,7 @@ $("#contact-button").on("click", function () {
         subject: $("#subject").val(),
         message: $("#message").val(),
     }
-    console.log(newContact);
+    validate();
     $.ajax("/contact", {
       type: "POST",
       data: newContact
@@ -20,6 +19,12 @@ $("#contact-button").on("click", function () {
       }
     );
   })
+
+  // function validate () {
+  //   if($("#first_name").val() === ""){
+  //     alert("Please fill in your First Name")
+  //   }
+  // }
   
   // $("#contact-button").on("click", function () {
   //     let newContact = {
