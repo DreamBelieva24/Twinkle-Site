@@ -13,7 +13,6 @@ var CustomerInfo = sequelize.define("CustomerInfo", {
   last_name: {
     type: DataTypes.STRING
   },
- 
  address: {
     type: DataTypes.STRING
   },
@@ -21,7 +20,7 @@ var CustomerInfo = sequelize.define("CustomerInfo", {
     type: DataTypes.STRING
   },
   phone: {
-    type: DataTypes.INTEGER
+    type: DataTypes.STRING
   },
   subject: {
     type: DataTypes.STRING
