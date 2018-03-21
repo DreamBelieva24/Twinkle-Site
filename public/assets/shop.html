@@ -7,29 +7,47 @@
   <title>Online Ordering</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link type="text/html" rel="stylesheet" href="/css/index.css">
+  <link type="text/css" rel="stylesheet" href="assets/css/index.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </header>
 
 <body>
   <main>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Twinkle Logo Here</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/shop">Shop</a>
-          </li>
-          <li>
-            <a href="/contact">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+      <nav class="nav-extended">
+          <div class="nav-wrapper light-green lighten-4">
+            <div id="logo">
+              <img class="brand-logo" class="left responsive-img;" src="/assets/images/twinklelogo.jpg" style="width:300px; height:150px;">>
+            </div>
+    
+            <!-- <div class="space"></div> -->
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+    
+              <li>
+                <a class="waves-effect waves-light btn-large " href="/">Home</a>
+              </li>
+              <li>
+                <a class="waves-effect waves-light btn-large " href="/shop">Shop</a>
+              </li>
+              <li>
+                <a class="waves-effect waves-light btn-large " href="/contact">Contact Us</a>
+              </li>
+            </ul>
+            <div class="nav-content">
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+    
+    
+            </div>
+          </div>
+    
+        </nav>
+
+
+
 
     <div class="container">
       <div class="row">
@@ -37,14 +55,28 @@
           <div class="card large">
             <div class="card-image">
               <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.0-9/22308601_1544750385613149_1284840514167237382_n.jpg?_nc_cat=0&oh=5e11efb5c9b267d736b2b1d0106a708e&oe=5B4923A5">
-              <span class="card-title">Card Title</span>
+              <span class="card-title">Octagon Purse</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                little markup to use effectively.</p>
+              <p>The Octagon Purse! Our latest fun and functional style addition to our genuine leather purses!!</p>
             </div>
             <div class="card-action">
-              <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Enlarge Photo</a>
+
+              <div id="modal1" class="modal">
+                <div class="modal-content">
+                  <h4>Octagon Purses</h4>
+                  <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.0-9/22308601_1544750385613149_1284840514167237382_n.jpg?_nc_cat=0&oh=5e11efb5c9b267d736b2b1d0106a708e&oe=5B4923A5"
+                    style="width:500px; height:500px;">
+
+
+
+                  <div class="modal-footer">
+                    <a href="#modal1" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -52,14 +84,30 @@
           <div class="card large">
             <div class="card-image">
               <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.0-9/22728651_1559373074150880_4924485112930621536_n.jpg?oh=93575d9952a76163c1eee0390e37f10e&oe=5B2CF5B1">
-              <span class="card-title">Card Title</span>
+              <span class="card-title">Credit Card Holder</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                little markup to use effectively.</p>
+
+              <p>A color wheel of credit card holders! They're genuine leather and have RFID blocking technology- perfect for
+                travel or everyday use!!</p>
             </div>
             <div class="card-action">
-              <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Enlarge Photo</a>
+              <div id="modal2" class="modal">
+                <div class="modal-content">
+                  <h4>Credit Card Holders</h4>
+                  <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.0-9/22728651_1559373074150880_4924485112930621536_n.jpg?oh=93575d9952a76163c1eee0390e37f10e&oe=5B2CF5B1"
+                    style="width:500px; height:500px;">
+
+
+
+                  <div class="modal-footer">
+                    <a href="#modal2" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+
+
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -67,125 +115,73 @@
           <div class="card large">
             <div class="card-image">
               <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t31.0-8/19238042_1439311749490347_3416898757404166265_o.jpg?_nc_cat=0&oh=bc7f85f73e1f249ebd369e7b77f9e01c&oe=5B489866">
-              <span class="card-title">Card Title</span>
+              <span class="card-title">Luggage Tags</span>
             </div>
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require
-                little markup to use effectively.</p>
+              <p>Genuine leather luggage tags. Perfect for travel and easy to spot with the fun bright colors.</p>
             </div>
+
+
+
             <div class="card-action">
               <!-- Modal Trigger -->
-              <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal3">Enlarge Picture</a>
 
               <!-- Modal Structure -->
-              <div id="modal1" class="modal">
+
+              <div id="modal3" class="modal">
                 <div class="modal-content">
-                  <h4>Modal Header</h4>
-                  <p>A bunch of text</p>
-                </div>
+                  <h4>Luggage Tags</h4>
+                  <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t31.0-8/19238042_1439311749490347_3416898757404166265_o.jpg?_nc_cat=0&oh=bc7f85f73e1f249ebd369e7b77f9e01c&oe=5B489866"
+                    style="width:500px; height:500px;">
 
-              </nav>
-             
-              <div class="container">
-                <div class="row">
-                  <div class="col s4">
-                    <div class="card large">
-                      <div class="card-image">
-                        <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.0-9/22308601_1544750385613149_1284840514167237382_n.jpg?_nc_cat=0&oh=5e11efb5c9b267d736b2b1d0106a708e&oe=5B4923A5">
-                        <span class="card-title">Octagon Purse</span>
-                      </div>
-                      <div class="card-content">
-                        <p>The Octagon Purse! 
-                            Our latest fun and functional style addition to our genuine leather purses!!</p>
-                      </div>
-                      <div class="card-action">
-                        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-                      </div>
-                    </div>
+
+
+                  <div class="modal-footer">
+                    <a href="#modal3" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
                   </div>
-                  <div class="col s4">
-                    <div class="card large">
-                      <div class="card-image">
-                        <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.0-9/22728651_1559373074150880_4924485112930621536_n.jpg?oh=93575d9952a76163c1eee0390e37f10e&oe=5B2CF5B1">
-                        <span class="card-title">Credit Card Holder</span>
-                      </div>
-                      <div class="card-content">
-                          
-                        <p>A color wheel of credit card holders! 
-                            They're genuine leather and have RFID blocking technology- perfect for travel or everyday use!!</p>
-                      </div>
-                      <div class="card-action">
-                        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col s4">
-                    <div class="card large">
-                      <div class="card-image">
-                        <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t31.0-8/19238042_1439311749490347_3416898757404166265_o.jpg?_nc_cat=0&oh=bc7f85f73e1f249ebd369e7b77f9e01c&oe=5B489866">
-                        <span class="card-title">Luggage Tags</span>
-                      </div>
-                      <div class="card-content">
-                        <p>Genuine leather luggage tags. Perfect for travel and easy to spot with the fun bright colors.</p>
-                      </div>
-                      <div class="card-action">
-                          <!-- Modal Trigger -->
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Luggage Tags</h4>
-      <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t31.0-8/19238042_1439311749490347_3416898757404166265_o.jpg?_nc_cat=0&oh=bc7f85f73e1f249ebd369e7b77f9e01c&oe=5B489866" style="width:500px; height:500px;">
-
-      <p>Genuine leather luggage tags. Perfect for travel and easy to spot with the fun bright colors.</p>
-
-                <div class="modal-footer">
-                  <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
 
 
   </main>
-  <footer class="page-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Contact Information</h5>
-          <p class="grey-text text-lighten-4">
-            33 Jefferson St
-            <br> Savannah, Georgia
-            <br>
-            <br> Call (912) 234-1001
-          </p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li>
-              <a class="grey-text text-lighten-3" href="#!">Do we need links?</a>
-            </li>
-            <li>
-              <a class="grey-text text-lighten-3" href="#!">Link 2</a>
-            </li>
-          </ul>
+  <footer class="page-footer light-green lighten-4">
+      <div class="container ">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="#26a69a teal-text">Contact Information</h5>
+            <p class="#26a69a teal-text">
+              33 Jefferson St
+              <br> Savannah, Georgia
+              <br>
+              <br> Call (912) 234-1001
+            </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="#26a69a teal-text">Links</h5>
+            <ul>
+              <li>
+                <a class="#26a69a teal-text" href="#!">Facebook Link Here</a>
+              </li>
+              <li>
+                <a class="g#26a69a teal-text" href="#!">Link 2</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-        © 2018 Georgia Tech Boot Camp
-        <a class="grey-text text-lighten-4 right" href="#!">Anything Here?</a>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2018 Georgia Tech Boot Camp
+  
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
   <script src="assets/js/index.js"></script>
   <script src="assets/js/interactive.js"></script>
 </body>
