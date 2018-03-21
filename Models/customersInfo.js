@@ -2,7 +2,6 @@
 // =============================================================
 
 module.exports = function(sequelize, DataTypes) {
-// Creates a "Book" model that matches up with DB
 var CustomerInfo = sequelize.define("CustomerInfo", {
 //   user_id: {
 //     type: Sequelize.INTEGER

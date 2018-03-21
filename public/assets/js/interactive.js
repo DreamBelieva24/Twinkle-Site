@@ -18,6 +18,7 @@ $(document).ready(function () {
         rangelength:[3,250]
       },
       email: {
+        required: true,
         minlength: 2,
         email: true,
       },
@@ -32,12 +33,16 @@ $(document).ready(function () {
     },
     submitHandler: function(form) {
       $.ajax("/contact", {
-          type: "POST",
-          data: $(form).serialize(),
-          complete: function(res) {
-              console.log(res);
-              location.reload();
-          }            
+        type: "POST",
+        data: $(form).serialize(),
+        success: function(res) {
+          var error = res.errors[0]
+          if (error) {
+            $('#modal1').modal('open');
+          } else {
+            location.reload();
+          }
+        },   
       });
   }
   })
