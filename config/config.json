@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "fq7blsyq9v5kowl8",
-    "password": "vzv6u37sd3ef1fec",
-    "database": "iuwqja73ovi5fs6s",
-    "host": "ixqxr3ajmyapuwmi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "root",
+    "database": "twinkle_db",
+    "host": "localhost",
     "dialect": "mysql",
     "port": 3308
   },
@@ -11,14 +11,16 @@
     "username": "root",
     "password": "root",
     "database": "twinkle_test",
-    "host": "local",
-    "dialect": "mysql"
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": 3308
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "fq7blsyq9v5kowl8",
+    "password": "vzv6u37sd3ef1fec",
+    "database": "iuwqja73ovi5fs6s",
+    "host": "ixqxr3ajmyapuwmi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "port": 3308
   }
 }
