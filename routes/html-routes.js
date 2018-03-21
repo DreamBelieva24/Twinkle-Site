@@ -14,4 +14,8 @@ module.exports = (app) => {
     res.sendFile(path.join(__dirname, "../public/assets/shop.html"));
   });
 
+  app.get("/cart", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/assets/cart.html"));
+  });
+
 };
