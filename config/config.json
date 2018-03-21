@@ -5,7 +5,11 @@
     "database": "twinkle_db",
     "host": "localhost",
     "dialect": "mysql",
+<<<<<<< HEAD
     "port": 8889
+=======
+    "port": 3308
+>>>>>>> 8e89b6098fed8c80df070bc19a067a9e2f205eb2
   },
   "test": {
     "username": "root",
