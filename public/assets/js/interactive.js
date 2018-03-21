@@ -36,8 +36,7 @@ $(document).ready(function () {
         type: "POST",
         data: $(form).serialize(),
         success: function(res) {
-          var error = res.errors[0]
-          if (error) {
+          if (res.errors) {
             $('#modal1').modal('open');
           } else {
             location.reload();
