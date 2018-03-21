@@ -17,7 +17,10 @@ var CustomerInfo = sequelize.define("CustomerInfo", {
     type: DataTypes.STRING
   },
   email: {
-    type: DataTypes.STRING
+    type: DataTypes.STRING,
+    validate: {
+      isEmail: true
+    }
   },
   phone: {
     type: DataTypes.STRING

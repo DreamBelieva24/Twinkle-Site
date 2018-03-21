@@ -29,7 +29,11 @@ module.exports = function (app) {
     app.post("/contact", function (req, res) {
         console.log(req.body);
         let contactInfo = req.body;
-        db.CustomerInfo.create(req.body);
-        res.json(contactInfo);
-    });
+        db.CustomerInfo.create(req.body)
+            .then(
+                res.json(contactInfo))
+            .catch(
+                res.json({error:true})
+            );
+    })
 }
