@@ -7,6 +7,12 @@ main {
     flex: 1 0 auto;
 }
 
+h4 {
+color: #00b8d4;
+
+}
+
+
 .waves-effect {
     font-size: 28px;
 }
@@ -15,6 +21,14 @@ main {
     color: black;
     font-weight: bolder;
    } 
+
+   #container-cart{
+    background-color: rgba(252, 252, 244, 0.9) ;
+    
+    color: black;
+    font-weight: bolder;
+    
+}
 .form-container {
     background-color: rgba(252, 252, 244, 0.9) ;
     
@@ -27,6 +41,11 @@ body.contact-body {
     background-size: cover;
 }
 
+body.cart-body {
+    background-image: url("../images/Store7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 #logo {
     padding-top: 5px;
     /* margin-top: 10px; */
@@ -41,14 +60,16 @@ nav ul a.btn-large {
 }
 .carousel .carousel-item {
     width:500px !important;
+    height:300px !important;
+    
 }
 
 
-.carousel {
-    margin-top: -10px;
+/* .carousel {
+    /* margin-top: -10px;
     /* height:500px; */
-    margin-bottom: 20px;
-}
+    /* margin-bottom: 20px;  */
+/* } */
 
 .error {
     color: #c00f53;
