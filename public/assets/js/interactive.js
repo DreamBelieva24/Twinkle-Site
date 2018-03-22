@@ -37,9 +37,23 @@ $(document).ready(function () {
           data: $(form).serialize(),
           success: function (res) {
             if (res.errors) {
+              $('.modal-content').empty();
               $('#modal1').modal('open');
+              let modalTitle = $('<h4>').text('Processing Error')
+              let text       = 'There was an issue processing your information,';
+                  text      += ' please double check each field and make sure your information is correct ';
+                  text      += 'i.e. no numbers in name fields, correct email format, correct phone number format, etc.';
+              let body       = $('<p>').text(text);
+              $('.modal-content').append(modalTitle).append(body);
             } else {
-              location.reload();
+              $('.contact-form').hide();
+              $('.modal-content').empty();
+              $('#modal1').modal('open');
+              let modalTitle = $('<h4>').text('Success!')
+              let text       = 'Your information has been submitted successfully.';
+                  text      += ' We will get back to you ASAP.';
+              let body       = $('<p>').text(text);
+              $('.modal-content').append(modalTitle).append(body);
             }
           },
         });
