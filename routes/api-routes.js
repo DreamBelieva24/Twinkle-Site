@@ -26,10 +26,21 @@ module.exports = function (app) {
     //     })
     // });
 
-    app.post("/contact", function (req, res) {
-        console.log(req.body);
-        let contactInfo = req.body;
-        db.CustomerInfo.create(req.body);
-        res.json(contactInfo);
-    });
+    app.post("/contact", function (req, res, next) {
+        db.CustomerInfo.create(req.body).then(data => {
+            res.json(data);
+        }).catch(errors => {
+            console.log(errors);
+            res.json(errors);
+        })
+    })
+
+    // app.post("/contact", function (req, res) {
+    //     db.CustomerInfo.create(req.body)
+    //         .then(
+    //             res.json(req.body))
+    //         .catch(
+    //             res.json({error:true})
+    //         );
+    // })
 }
