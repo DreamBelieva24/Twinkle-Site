@@ -12,8 +12,8 @@ before(done => {
     });
 });
 
-describe('contactRoute', function () {
-    it('should add a SINGLE contact on /contact POST', function (done) {
+describe('Contact Page', function () {
+    it('should add a SINGLE contact with proper properties on /contact POST', function (done) {
         chai.request(server)
             .post('/contact')
             .send({
