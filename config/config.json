@@ -17,11 +17,7 @@
     "port": 3308
   },
   "production": {
-    "username": "fq7blsyq9v5kowl8",
-    "password": "vzv6u37sd3ef1fec",
-    "database": "iuwqja73ovi5fs6s",
-    "host": "ixqxr3ajmyapuwmi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
-    "dialect": "mysql",
-    "port": 3308
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
   }
 }
