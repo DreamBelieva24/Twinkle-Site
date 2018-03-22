@@ -1,8 +1,8 @@
-$(document).ready(function(){
-    $('.carousel').carousel();
-  });
+$(document).ready(function () {
+  $('.carousel').carousel();
+});
 
-  // Next slide
+// Next slide
 $('.carousel').carousel('next');
 $('.carousel').carousel('next', 3); // Move next n times.
 
@@ -15,6 +15,7 @@ $('.carousel').carousel('set', 4);
 
 // Destroy carousel
 $('.carousel').carousel('destroy');
+
 
 
 
@@ -57,3 +58,4 @@ $(document).ready(function(){
   $(document).ready(function() {
     $('select').material_select();
  });
+

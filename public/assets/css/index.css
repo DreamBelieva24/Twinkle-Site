@@ -3,6 +3,7 @@ body {
     min-height: 100vh;
     flex-direction: column;
 }
+
 main {
     flex: 1 0 auto;
 }
@@ -16,10 +17,11 @@ color: #00b8d4;
 .waves-effect {
     font-size: 28px;
 }
-   input {
 
+input {
     color: black;
     font-weight: bolder;
+
    } 
 
    #container-cart{
@@ -29,12 +31,16 @@ color: #00b8d4;
     font-weight: bolder;
     
 }
+
+
+
+
 .form-container {
-    background-color: rgba(252, 252, 244, 0.9) ;
-    
+    background-color: rgba(252, 252, 244, 0.9);
     color: black;
     font-weight: bolder;
 }
+
 body.contact-body {
     background-image: url("../images/Store3.jpg");
     background-repeat: no-repeat;
@@ -52,13 +58,12 @@ body.cart-body {
     margin-left: 40px;
 }
 
-
-
 nav ul a.btn-large {
     margin-top: 20px;
-    
 }
+
 .carousel .carousel-item {
+
     width:500px !important;
     height:300px !important;
     
@@ -67,6 +72,8 @@ nav ul a.btn-large {
 
 /* .carousel {
     /* margin-top: -10px;
+
+   
     /* height:500px; */
     /* margin-bottom: 20px;  */
 /* } */
@@ -75,9 +82,8 @@ nav ul a.btn-large {
     color: #c00f53;
 }
 
-@media only screen and (min-width: 601px){
+@media only screen and (min-width: 601px) {
     nav {
         height: 95px;
-    } 
-
+    }
 }
