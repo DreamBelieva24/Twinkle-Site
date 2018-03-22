@@ -15,10 +15,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname + "/public")));
 
-// const expHbs = require("express-handlebars");
-// app.engine("handlebars", expHbs({ defaultLayout: "main" }));
-// app.set("view engine", "handlebars");
-
 // Routes
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
@@ -28,5 +24,8 @@ require("./routes/html-routes.js")(app);
 db.sequelize.sync().then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
+    app.emit('serverStarted');
   });
 });
+
+module.exports = app;
