@@ -8,53 +8,55 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="assets/css/index.css">
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </header>
 
 <body>
   <main>
-      <nav class="nav-extended">
-          <div class="nav-wrapper l#fce4ec pink lighten-5">
-            <div id="logo">
-              <img class="brand-logo" class="left responsive-img;" src="/assets/images/twinklelogo.jpg" style="width:300px; height:150px;">>
-            </div>
-    
-            <!-- <div class="space"></div> -->
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-    
-              <li>
-                <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/">Home</a>
-              </li>
-              <li>
-                <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/shop">Shop</a>
-              </li>
-              <li>
-                <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/contact">Contact Us</a>
-              </li>
-              <li>
-                <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/cart">
-                    <i class="material-icons">shopping_cart</i>
-                </a>
-            </li>
-            </ul>
-            <div class="nav-content">
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-    
-    
-            </div>
-          </div>
-    
-        </nav>
+    <nav class="nav-extended">
+      <div class="nav-wrapper l#fce4ec pink lighten-5">
+        <div id="logo">
+          <img class="brand-logo" class="left responsive-img;" src="/assets/images/twinklelogo.jpg" style="width:300px; height:150px;">>
+        </div>
+
+        <!-- <div class="space"></div> -->
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+          <li>
+            <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/">Home</a>
+          </li>
+          <li>
+            <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/shop">Shop</a>
+          </li>
+          <li>
+            <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/contact">Contact Us</a>
+          </li>
+          <li>
+            <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/cart">
+              <i class="material-icons">shopping_cart</i>
+            </a>
+          </li>
+        </ul>
+        <div class="nav-content">
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+
+        </div>
+      </div>
+
+    </nav>
 
 
 
+    <div class="container-products">
 
-    <div class="container">
       <div class="row">
         <div class="col s4">
           <div class="card large">
@@ -67,24 +69,55 @@
             </div>
             <div class="card-action">
 
-              <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Enlarge Photo</a>
+              <a class="waves-effect waves-cyan btn-flat btn-small #00b8d4 cyan-text lighten-4-text modal-trigger" href="#modal1">
+                <h5>Enlarge Photo</h5>
+              </a>
 
               <div id="modal1" class="modal">
                 <div class="modal-content">
-                  <h4>Octagon Purses</h4>
-                  <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.0-9/22308601_1544750385613149_1284840514167237382_n.jpg?_nc_cat=0&oh=5e11efb5c9b267d736b2b1d0106a708e&oe=5B4923A5"
-                    style="width:500px; height:500px;">
 
+                  <div class="row">
+                    <div class="col s6">
+                      <h4>Octagon Purses</h4>
+                      <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.0-9/22308601_1544750385613149_1284840514167237382_n.jpg?_nc_cat=0&oh=5e11efb5c9b267d736b2b1d0106a708e&oe=5B4923A5"
+                        style="width:500px; height:500px;">
 
+                    </div>
+                    <div class="col s4 offset-s2">
+                        <label><h4>Select a Color</h4></label>
+                        <select>
+                           <option value = "" disabled selected>Select Color</option>
+                           <option value = "6600aqua">Aqua</option>
+                           <option value = "6600blk">Black</option>
+                           <option value = "6600hotpink">Hot Pink</option>
+                           <option value = "6600leaf">Leaf</option>
+                           <option value = "6600olive">Olive</option>
+                           <option value = "6600 mgrn">Moss Green</option>
+                           <option value = "6600red">Red</option>
+                           <option value = "6600yel">Yellow</option>
+                           
+                        </select> 
+                    </div>
 
+                    <div class="modal-footer">
+                      <a href="#modal2" class="modal-action modal-close waves-effect #00b8d4 cyan-text lighten-4-text">Close</a>
+
+                    </div>
+                  </div>
                   <div class="modal-footer">
-                    <a href="#modal1" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                    <a href="#modal1" class="modal-action modal-close waves-effect #00b8d4 cyan-text lighten-4-text#00b8d4 cyan-text lighten-4-text">Close</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+
+
+
+
+
         <div class="col s4">
           <div class="card large">
             <div class="card-image">
@@ -95,27 +128,53 @@
 
               <p>A color wheel of credit card holders! They're genuine leather and have RFID blocking technology- perfect for
                 travel or everyday use!!</p>
+
+
             </div>
             <div class="card-action">
-              <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Enlarge Photo</a>
+              <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text modal-trigger" href="#modal2">
+                <h5>Enlarge Photo</h5>
+              </a>
               <div id="modal2" class="modal">
                 <div class="modal-content">
-                  <h4>Credit Card Holders</h4>
-                  <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.0-9/22728651_1559373074150880_4924485112930621536_n.jpg?oh=93575d9952a76163c1eee0390e37f10e&oe=5B2CF5B1"
-                    style="width:500px; height:500px;">
+                  <div class="row">
+                    <div class="col s6">
+                      <h4>Credit Card Holders</h4>
+                      <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.0-9/22728651_1559373074150880_4924485112930621536_n.jpg?oh=93575d9952a76163c1eee0390e37f10e&oe=5B2CF5B1"
+                        style="width:500px; height:500px;">
 
+                    </div>
+                    <div class="col s4 offset-s2">
+                        <label><h4>Select a Color</h4></label>
+                        <select>
+                           <option value = "" disabled selected>Select Color</option>
+                           <option value = "7201aqua">Aqua</option>
+                           <option value = "7201blk">Black</option>
+                           <option value = "7201hotpink">Hot Pink</option>
+                           <option value = "7201leaf">Leaf</option>
+                           <option value = "7201olive">Olive</option>
+                           <option value = "7201 mgrn">Moss Green</option>
+                           <option value = "7201red">Red</option>
+                           <option value = "7201yel">Yellow</option>
+                           
+                        </select> 
 
+                    </div>
 
-                  <div class="modal-footer">
-                    <a href="#modal2" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                    <div class="modal-footer">
+                      <a href="#modal2" class="modal-action modal-close waves-effect #00b8d4 cyan-text lighten-4-text">Close</a>
 
-
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+
+
+
         <div class="col s4">
           <div class="card large">
             <div class="card-image">
@@ -124,106 +183,123 @@
             </div>
             <div class="card-content">
               <p>Genuine leather luggage tags. Perfect for travel and easy to spot with the fun bright colors.</p>
+
             </div>
 <ul>
 <!-- Dropdown Trigger -->
 <a class='dropdown-button btn' href='#' data-activates='dropdown1'>Pick a Color!</a>
 
-<!-- Dropdown Structure -->
-<ul id='dropdown1' class='dropdown-content'>
-  <li><a href="#!">Red</a></li>
-  <li><a href="#!">Yellow</a></li>
-  <li><a href="#!">Blue</a></li>
-  <li><a href="#!">Green</a></li>
-  <li><a href="#!">Purple</a></li>
+
   
  
-</ul>
+
 
 <a class='dropdown-button btn' href='#' data-activates='dropdown2'>Quantity!</a>
 
-<!-- Dropdown Structure -->
-<ul id='dropdown2' class='dropdown-content'>
-  <li><a href="#!">1</a></li>
-  <li><a href="#!">2</a></li>
-  <li><a href="#!">3</a></li>
-  <li><a href="#!">4</a></li>
-  <li><a href="#!">5</a></li>
-  
- 
-</ul>
 
-</ul>
+
+
+
+
 
             <div class="card-action">
               <!-- Modal Trigger -->
               <a class="waves-effect waves-light btn modal-trigger" href="#modal3">Enlarge Photo</a>
 
-              <!-- Modal Structure -->
-
-              <div id="modal3" class="modal">
-                <div class="modal-content">
-                  <h4>Luggage Tags</h4>
-                  <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t31.0-8/19238042_1439311749490347_3416898757404166265_o.jpg?_nc_cat=0&oh=bc7f85f73e1f249ebd369e7b77f9e01c&oe=5B489866"
-                    style="width:500px; height:500px;">
 
 
+              <div class="card-action">
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text modal-trigger" href="#modal3">
+                  <h5>Enlarge Photo</h5>
+                </a>
 
-                  <div class="modal-footer">
-                    <a href="#modal3" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                <!-- Modal Structure -->
+
+                <div id="modal3" class="modal">
+                  <div class="modal-content">
+                    <div class="row">
+                      <div class="col s6">
+                        <h4>Luggage Tags</h4>
+                        <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t31.0-8/19238042_1439311749490347_3416898757404166265_o.jpg?_nc_cat=0&oh=bc7f85f73e1f249ebd369e7b77f9e01c&oe=5B489866"
+                          style="width:500px; height:500px;">
+
+                      </div>
+                      <div class="col s4 offset-s2">
+                          <label><h4>Select a Color</h4></label>
+                          <select>
+                             <option value = "" disabled selected>Select Color</option>
+                             <option value = "6422aqua">Aqua</option>
+                             <option value = "'6422blk">Black</option>
+                             <option value = "6422hotpink">Hot Pink</option>
+                             <option value = "6422leaf">Leaf</option>
+                             <option value = "6422olive">Olive</option>
+                             <option value = "6420 mgrn">Moss Green</option>
+                             <option value = "6422red">Red</option>
+                             <option value = "6422yel">Yellow</option>
+                             
+                          </select> 
+
+                      </div>
+
+                      <div class="modal-footer">
+                        <a href="#modal2" class="modal-action modal-close waves-effect #00b8d4 cyan-text lighten-4-text">Close</a>
+
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
+
+
 
 
 
   </main>
   <footer class="page-footer l#fce4ec pink lighten-5">
-      <div class="container ">
-        <div class="row">
-         
-          <div class="col s4">
-            
-            <p class="#00b8d4 cyan-text lighten-4-text">
-              33 Jefferson St
-              <br> Savannah, Georgia
-              <br>
-              <br>  
-            </p>
-          </div>
-          <div class="col s4">
-            
-            <p class="#00b8d4 cyan-text lighten-4-text">
-               Phone: (912) 234-1001
-               <br>
-              Email: twinklecitymarket@yahoo.com
-              
-            </p>
-          </div>
-          <div class="col s4">
-            <h5 class="#00b8d4 cyan-text lighten-4-text"></h5>
-            <ul>
-              <li>
-                <a class="#00b8d4 cyan-text lighten-4-text" href="https://www.facebook.com/twinkletimecitymarket/">Facebook</a>
-              </li>
-              <li>
-                <a class="#00b8d4 cyan-text lighten-4-text" href="#!"></a>
-              </li>
-            </ul>
-          </div>
+    <div class="container ">
+      <div class="row">
+
+        <div class="col s4">
+
+          <p class="#00b8d4 cyan-text lighten-4-text">
+            33 Jefferson St
+            <br> Savannah, Georgia
+            <br>
+            <br>
+          </p>
+        </div>
+        <div class="col s4">
+
+          <p class="#00b8d4 cyan-text lighten-4-text">
+            Phone: (912) 234-1001
+            <br> Email: twinklecitymarket@yahoo.com
+
+          </p>
+        </div>
+        <div class="col s4">
+          <h5 class="#00b8d4 cyan-text lighten-4-text"></h5>
+          <ul>
+            <li>
+              <a class="#00b8d4 cyan-text lighten-4-text" href="https://www.facebook.com/twinkletimecitymarket/">Facebook</a>
+            </li>
+            <li>
+              <a class="#00b8d4 cyan-text lighten-4-text" href="#!"></a>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="footer-copyright">
-        <div class="container">
-            <div class="col s12 s6 offset-s6">© 2018 BobKatCampbell</div>
-  
-        </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="col s12 s6 offset-s6">© 2018 BobKatCampbell</div>
+
       </div>
-    </footer>
+    </div>
+  </footer>
   <script src="assets/js/index.js"></script>
   <script src="assets/js/interactive.js"></script>
 </body>
