@@ -29,7 +29,7 @@ module.exports = function (app) {
         let param = req.params.id;
         db.Inventory.findOne({
             where: {
-                id: param
+                item_number: param
             }
         }).then( (data) => {
             let specificProduct = {
