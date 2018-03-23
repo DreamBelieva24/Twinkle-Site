@@ -20,15 +20,16 @@ $(document).ready(function () {
                     let inventoryStock = $("<p>").text(stock);
                     let inventoryBlock = productDiv.append(inventoryHeader.append(inventoryStock));
                     //create dropdown to allow user to select desired quantity
-                    let quantity = $("#purse-quantity");
+                    let selectHeader = $("<h4>").text("Order quantity:")
+                    let selectTag = $("<select>").addClass("select-quant btn");
                     let optionTag;
                     for (let i = 1; i <= stock; i++) {
-                        console.log(i);
                         optionTag = $("<option>").text(i);
-                        quantity.append(optionTag);
+                        selectTag.append(optionTag);
                     }
-                    // let selecting = selectDiv.append(selectTag.append(optionTag));
-                    // let selectBlock = productDiv.append(quantity);
+                    let selection = selectTag.append(optionTag);
+                    let selectionAndHeader = selectHeader.append(selection);
+                    let selectBlock = productDiv.append(selectionAndHeader);
                     //display price of purchase
                     let priceHeader = $("<h4>").text("Price:");
                     let price = $("<p>").text("$" + data.product.price);
@@ -56,12 +57,27 @@ $(document).ready(function () {
                 console.log(data);
                 if (data.product) {
                     let stock = data.product.in_stock;
+                    $(".credit-info").remove();
+                    //create div to append info to within modal
                     let productDiv = $("<div>").addClass("credit-info")
                     $(".credit-info").empty();
                     $(".credit-no-stock").empty();
+                    //create block to display stock and append to div
                     let inventoryHeader = $("<h4>").text("In stock:");
                     let inventoryStock = $("<p>").text(stock);
                     let inventoryBlock = productDiv.append(inventoryHeader.append(inventoryStock));
+                    //create dropdown to allow user to select desired quantity
+                    let selectHeader = $("<h4>").text("Order quantity:")
+                    let selectTag = $("<select>").addClass("select-quant btn");
+                    let optionTag;
+                    for (let i = 1; i <= stock; i++) {
+                        optionTag = $("<option>").text(i);
+                        selectTag.append(optionTag);
+                    }
+                    let selection = selectTag.append(optionTag);
+                    let selectionAndHeader = selectHeader.append(selection);
+                    let selectBlock = productDiv.append(selectionAndHeader);
+                    //display price of purchase
                     let priceHeader = $("<h4>").text("Price:");
                     let price = $("<p>").text("$" + data.product.price);
                     let priceBlock = productDiv.append(priceHeader.append(price));
@@ -88,12 +104,27 @@ $(document).ready(function () {
                 console.log(data);
                 if (data.product) {
                     let stock = data.product.in_stock;
+                    $(".lug-info").remove();
+                    //create div to append info to within modal
                     let productDiv = $("<div>").addClass("lug-info")
                     $(".lug-info").empty();
                     $(".lug-no-stock").empty();
+                    //create block to display stock and append to div
                     let inventoryHeader = $("<h4>").text("In stock:");
                     let inventoryStock = $("<p>").text(stock);
                     let inventoryBlock = productDiv.append(inventoryHeader.append(inventoryStock));
+                    //create dropdown to allow user to select desired quantity
+                    let selectHeader = $("<h4>").text("Order quantity:")
+                    let selectTag = $("<select>").addClass("select-quant btn");
+                    let optionTag;
+                    for (let i = 1; i <= stock; i++) {
+                        optionTag = $("<option>").text(i);
+                        selectTag.append(optionTag);
+                    }
+                    let selection = selectTag.append(optionTag);
+                    let selectionAndHeader = selectHeader.append(selection);
+                    let selectBlock = productDiv.append(selectionAndHeader);
+                    //display price of purchase
                     let priceHeader = $("<h4>").text("Price:");
                     let price = $("<p>").text("$" + data.product.price);
                     let priceBlock = productDiv.append(priceHeader.append(price));
