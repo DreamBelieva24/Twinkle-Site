@@ -59,3 +59,12 @@ $(document).ready(function(){
     $('select').material_select();
  });
 
+ $(".addCart").on("click", function() {
+ 
+  $(".product-name").html("Product Name")
+  $(".product-color").html("Product Color")
+  $(".product-quantity").html("Product Quantity")
+  $(".product-price").html("Price")
+   
+  
+});
