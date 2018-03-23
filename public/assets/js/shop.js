@@ -16,6 +16,9 @@ $(document).ready(function () {
                     let inventoryStock = $("<p>").text(data.product.in_stock);
                     let inventoryBlock = productDiv.append(inventoryHeader.append(inventoryStock));
                     $(".purse-choice").append(inventoryBlock);
+                    let priceHeader = $("<h4>").text("Price:");
+                    let price = $("<p>").text("$" + data.product.price);
+                    let priceBlock = productDiv.append(priceHeader.append(price));
                 } else {
                     let stockMessageDiv = $("<div>").addClass("purse-no-stock")
                     $(".purse-no-stock").empty();
@@ -44,6 +47,9 @@ $(document).ready(function () {
                     let inventoryStock = $("<p>").text(data.product.in_stock);
                     let inventoryBlock = productDiv.append(inventoryHeader.append(inventoryStock));
                     $(".credit-choice").append(inventoryBlock);
+                    let priceHeader = $("<h4>").text("Price:");
+                    let price = $("<p>").text("$" + data.product.price);
+                    let priceBlock = productDiv.append(priceHeader.append(price));
                 } else {
                     let stockMessageDiv = $("<div>").addClass("credit-no-stock")
                     $(".credit-no-stock").empty();
@@ -72,6 +78,9 @@ $(document).ready(function () {
                     let inventoryStock = $("<p>").text(data.product.in_stock);
                     let inventoryBlock = productDiv.append(inventoryHeader.append(inventoryStock));
                     $(".lug-choice").append(inventoryBlock);
+                    let priceHeader = $("<h4>").text("Price:");
+                    let price = $("<p>").text("$" + data.product.price);
+                    let priceBlock = productDiv.append(priceHeader.append(price));
                 }  else {
                     let stockMessageDiv = $("<div>").addClass("lug-no-stock")
                     $(".lug-no-stock").empty();
