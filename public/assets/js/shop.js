@@ -21,10 +21,10 @@ $(document).ready(function () {
                     let inventoryBlock = productDiv.append(inventoryHeader.append(inventoryStock));
                     //create dropdown to allow user to select desired quantity
                     let selectHeader = $("<h4>").text("Order quantity:")
-                    let selectTag = $("<select>").addClass("select-quant btn");
+                    let selectTag = $("<select>").addClass("purse-select-quant btn dropdown-trigger").attr("data-target", 'dropdown1');
                     let optionTag;
-                    for (let i = 1; i <= stock; i++) {
-                        optionTag = $("<option>").text(i);
+                    for (let i = 0; i <= stock; i++) {
+                        optionTag = $("<option>").text(i).addClass("purse" + i).attr("value", i);
                         selectTag.append(optionTag);
                     }
                     let selection = selectTag.append(optionTag);
@@ -35,6 +35,10 @@ $(document).ready(function () {
                     let price = $("<p>").text("$" + data.product.price);
                     let priceBlock = productDiv.append(priceHeader.append(price));
                     $(".purse-choice").append(inventoryBlock);
+                    $(".purse-select-quant").on("change", function () {
+                        let chosenQuant = $(this).val();
+                        console.log(chosenQuant);
+                    })
                 } else {
                     let stockMessageDiv = $("<div>").addClass("purse-no-stock")
                     $(".purse-no-stock").empty();
