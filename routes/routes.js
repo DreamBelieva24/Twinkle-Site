@@ -1,13 +1,27 @@
 var db = require("../models");
+const path = require("path");
 
 module.exports = function (app) {
+
+    app.get("/", (req, res) => {
+        res.sendFile(path.join(__dirname, "../public/assets/index.html"));
+    });
+    
+    app.get("/contact", (req, res) => {
+        res.sendFile(path.join(__dirname, "../public/assets/contact.html"));
+    });
+    
+    app.get("/cart", (req, res) => {
+        res.sendFile(path.join(__dirname, "../public/assets/cart.html"));
+    });
 
     app.get("/shop", function (req, res) {
         db.Inventory.findAll({}).then(data => {
             let allProductsForHandlebars = {
                 product: data
             }
-            res.json(allProductsForHandlebars);
+            // res.json(allProductsForHandlebars);
+            res.sendFile(path.join(__dirname, "../public/assets/shop.html"));
         })
     });
 
@@ -33,13 +47,4 @@ module.exports = function (app) {
             res.json(errors);
         })
     })
-
-    // app.post("/contact", function (req, res) {
-    //     db.CustomerInfo.create(req.body)
-    //         .then(
-    //             res.json(req.body))
-    //         .catch(
-    //             res.json({error:true})
-    //         );
-    // })
 }
