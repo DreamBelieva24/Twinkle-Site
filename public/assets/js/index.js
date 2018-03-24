@@ -59,12 +59,37 @@ $(document).ready(function(){
     $('select').material_select();
  });
 
+productNames = []
+productColors = []
+productQuantities = []
+productPrices = []
+
  $(".addCart").on("click", function() {
+
+  productColors.push(document.getElementById("chosen-color").value)
+
+  console.log(productColors)
+
+  displayCart();
  
-  $(".product-name").html("Product Name")
-  $(".product-color").html("Product Color")
-  $(".product-quantity").html("Product Quantity")
-  $(".product-price").html("Price")
-   
   
 });
+
+function displayCart(){
+
+  cartdata = "<h2>Shopping Cart</h2><div class='col s3'><table class='striped'><thead><tr><th>Product Name</th><th>Color</th><th>Quantity</th><th>Price</th><tr><thead>";
+
+  for (i=0; i<productColors.length; i++){
+    cartdata += "<tbody><tr>" + productColors[i] + " <button onclick='delElement(" + i + ")'>Remove Item</button></div>"
+  }
+
+console.log(cartdata)
+
+  document.getElementById("container-cart").innerHTML = cartdata
+
+}
+
+function delElement(a){
+  productColors.splice(a, 1)
+  displayCart();
+}
