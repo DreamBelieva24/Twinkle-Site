@@ -55,6 +55,11 @@ body.cart-body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+#cart-body {
+    background-image: url("../images/Store7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 #logo {
     padding-top: 5px;
     /* margin-top: 10px; */
