@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  console.log("hi");
+  console.log($("form#contact"))
   $("form#contact")
     .validate({
       errorElement: "div",
@@ -37,6 +39,7 @@ $(document).ready(function () {
           data: $(form).serialize(),
           success: function (res) {
             if (res.errors) {
+              console.log("hi");
               $('.modal-content').empty();
               $('#modal1').modal('open');
               let modalTitle = $('<h4>').text('Processing Error')
@@ -46,6 +49,7 @@ $(document).ready(function () {
               let body       = $('<p>').text(text);
               $('.modal-content').append(modalTitle).append(body);
             } else {
+              console.log("hi");
               $('.contact-form').hide();
               $('.modal-content').empty();
               $('#modal1').modal('open');

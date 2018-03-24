@@ -1,5 +1,6 @@
 var db = require("../models");
 const path = require("path");
+const email = require("../public/assets/js/email");
 
 module.exports = function (app) {
 
@@ -42,7 +43,9 @@ module.exports = function (app) {
     app.post("/contact", function (req, res, next) {
         console.log(req, res);
         db.CustomerInfo.create(req.body).then(data => {
-            res.json(data);
+            let string = JSON.stringify(req.body);
+            email(string);
+            // res.json(data);
         }).catch(errors => {
             console.log(errors);
             res.json(errors);
