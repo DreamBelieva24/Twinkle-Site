@@ -32,7 +32,7 @@ $(document).ready(function () {
                     let selectBlock = productDiv.append(selectionAndHeader);
                     //display price of purchase
                     let priceHeader = $("<h5>").text("Price per:");
-                    let price = $("<p>").text("$" + data.product.price);
+                    let price = $("<p>").text("$" + data.product.price).attr("id", "data.product.price");
                     let priceBlock = productDiv.append(priceHeader.append(price));
                     $(".purse-choice").append(inventoryBlock);
                 } else {
