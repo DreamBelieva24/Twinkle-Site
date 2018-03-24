@@ -90,7 +90,7 @@ $(".addCart-tag").on("click", function() {
 $(".addCart-ccholder").on("click", function() {
 
   productNames.push(document.getElementById("Credit Card Holder").id)
-  productColors.push(document.getElementsById("credit-select").value)
+  productColors.push(document.getElementById("credit-select").value)
   productQuantities.push(parseInt(document.getElementById("chosen-quantity-ccholder").value))
   productPrices.push(parseInt(document.getElementById("12.00").id))
   
