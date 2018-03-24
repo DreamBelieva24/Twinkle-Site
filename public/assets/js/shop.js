@@ -114,8 +114,8 @@ $(document).ready(function () {
                     let inventoryStock = $("<p>").text(stock);
                     let inventoryBlock = productDiv.append(inventoryHeader.append(inventoryStock));
                     //create dropdown to allow user to select desired quantity
-                    let selectHeader = $("<h4>").text("Order quantity:")
-                    let selectTag = $("<select>").addClass("select-quant btn");
+                    let selectHeader = $("<h4>").text("Order quantity:").addClass("black-text");
+                    let selectTag = $("<select>").addClass("select-quant btn black-text");
                     let optionTag;
                     for (let i = 1; i <= stock; i++) {
                         optionTag = $("<option>").text(i);
