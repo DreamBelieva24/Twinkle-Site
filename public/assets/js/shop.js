@@ -68,7 +68,7 @@ $(document).ready(function () {
                     let inventoryBlock = productDiv.append(inventoryHeader.append(inventoryStock));
                     //create dropdown to allow user to select desired quantity
                     let selectHeader = $("<h5>").text("Order quantity:")
-                    let selectTag = $("<select>").addClass("select-quant waves-effect waves-cyan btn-flat btn-small #00b8d4 black-text");
+                    let selectTag = $("<select>").addClass("select-quant waves-effect waves-cyan btn-flat btn-small #00b8d4 black-text").attr("id", "chosen-quantity-ccholder");
                     let optionTag;
                     for (let i = 1; i <= stock; i++) {
                         optionTag = $("<option>").text(i);
@@ -79,7 +79,7 @@ $(document).ready(function () {
                     let selectBlock = productDiv.append(selectionAndHeader);
                     //display price of purchase
                     let priceHeader = $("<h5>").text("Price per:");
-                    let price = $("<p>").text("$" + data.product.price);
+                    let price = $("<p>").text("$" + data.product.price).attr("id", "12.00");
                     let priceBlock = productDiv.append(priceHeader.append(price));
                     $(".credit-choice").append(inventoryBlock);
                 } else {
@@ -115,7 +115,7 @@ $(document).ready(function () {
                     let inventoryBlock = productDiv.append(inventoryHeader.append(inventoryStock));
                     //create dropdown to allow user to select desired quantity
                     let selectHeader = $("<h5>").text("Order quantity:").addClass("black-text");
-                    let selectTag = $("<select>").addClass("select-quant waves-effect waves-cyan btn-flat btn-small #00b8d4 black-text font-size:5px");
+                    let selectTag = $("<select>").addClass("select-quant waves-effect waves-cyan btn-flat btn-small #00b8d4 black-text font-size:5px").attr("id", "chosen-quantity-tag");
                     let optionTag;
                     for (let i = 1; i <= stock; i++) {
                         optionTag = $("<option>").text(i).addClass("black-text").css("font-size", "20px");
@@ -126,7 +126,7 @@ $(document).ready(function () {
                     let selectBlock = productDiv.append(selectionAndHeader).addClass("black-text font-size:30px");
                     //display price of purchase
                     let priceHeader = $("<h5>").text("Price per:").addClass("black-text");
-                    let price = $("<p>").text("$" + data.product.price).addClass("black-text");
+                    let price = $("<p>").text("$" + data.product.price).addClass("black-text").attr("id", "10.00");
                     let priceBlock = productDiv.append(priceHeader.append(price));
                     $(".lug-choice").append(inventoryBlock);
                 }  else {

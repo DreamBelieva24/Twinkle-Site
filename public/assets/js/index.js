@@ -79,9 +79,9 @@ $(".addCart-purse").on("click", function() {
 $(".addCart-tag").on("click", function() {
 
   productNames.push(document.getElementById("Luggage Tag").id)
-  productColors.push(document.getElementsByClassName("chosen-color-tag").value)
-  // productQuantities.push(parseInt(document.getElementsByClassName("chosen-quantity-tag").value))
-  // productPrices.push(parseInt(document.getElementById("10.00").id))
+  productColors.push(document.getElementById("lug-select").value)
+  productQuantities.push(parseInt(document.getElementById("chosen-quantity-tag").value))
+  productPrices.push(parseInt(document.getElementById("10.00").id))
   
   displayCart();
  
@@ -90,9 +90,9 @@ $(".addCart-tag").on("click", function() {
 $(".addCart-ccholder").on("click", function() {
 
   productNames.push(document.getElementById("Credit Card Holder").id)
-  productColors.push(document.getElementsByClassName("chosen-color-ccholder").value)
-  // productQuantities.push(parseInt(document.getElementById("chosen-quantity-ccholder").value))
-  // productPrices.push(parseInt(document.getElementById("12.00").id))
+  productColors.push(document.getElementsById("credit-select").value)
+  productQuantities.push(parseInt(document.getElementById("chosen-quantity-ccholder").value))
+  productPrices.push(parseInt(document.getElementById("12.00").id))
   
   displayCart();
  
