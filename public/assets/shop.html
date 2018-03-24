@@ -259,6 +259,8 @@
                       </div>
                   </div>
               </div>
+
+              <div id="confirm" class="hidden">
               <h4>Shipping Address:</h4>
 
 
@@ -266,12 +268,7 @@
                   <form class="col s12 contact-form right-alert" id="contact">
                       <div class="row">
                           <div class="input-field col s6">
-                              <input id="first_name" name="first_name" type="text">
-                              <label for="first_name">* First Name</label>
-                          </div>
-                          <div class="input-field col s6">
-                              <input id="last_name" type="text" name="last_name">
-                              <label for="last_name">* Last Name</label>
+                            <span id="recipient"></span>
                           </div>
                       </div>
                       <div class="row">
@@ -287,17 +284,20 @@
 
                       <div class="row">
                           <div class="input-field col s12">
-                              <input id="address" type="text" name="address">
-                              <label for="address">* Address</label>
+                            <span id="line1"></span><br>
+                            <span id="city"></span>,<span id="state"></span> &nbsp; <span id="zip"></span> &nbsp; <span id="country"></span>
                           </div>
+                          <button id="confirmButton">Complete Payment</button>
                       </div>
+                      <div id="thanks" class="hidden">
+                        Thanks, <span id="thanksname"></span>!
+                    </div>
                       <div class="col 4 offset-s8" id="paypal-button-container"></div>
-                      <div id="confirm" class="hidden">
-                        <div>Ship to:</div>
-                        <div><span id="recipient"></span>, <span id="line1"></span>, <span id="city"></span></div>
-                        <div><span id="state"></span>, <span id="zip"></span>, <span id="country"></span></div>
+                    </div>
+                      
+                        
                     
-                        <button id="confirmButton">Complete Payment</button>
+                        
                     </div>
                     
                     <div id="thanks" class="hidden">
