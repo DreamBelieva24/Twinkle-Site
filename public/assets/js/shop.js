@@ -21,8 +21,7 @@ $(document).ready(function () {
                     let inventoryBlock = productDiv.append(inventoryHeader.append(inventoryStock));
                     //create dropdown to allow user to select desired quantity
                     let selectHeader = $("<h5>").text("Order quantity:")
-                    let selectTag = $("<select>").addClass("select-quant waves-effect waves-cyan btn-flat btn-small #00b8d4 black-text").attr("data-target", 'dropdown1');
-                    let selectTag = $("<select>").addClass("chosen-quantity-purse");
+                    let selectTag = $("<select>").addClass("chosen-quantity-purse select-quant waves-effect waves-cyan btn-flat btn-small #00b8d4 black-text").attr("data-target", 'dropdown1');
                     let optionTag;
                     for (let i = 0; i <= stock; i++) {
                         optionTag = $("<option>").text(i).addClass("purse" + i).attr("value", i);
