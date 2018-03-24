@@ -47,7 +47,7 @@ body.contact-body {
     background-size: cover;
 }
 
-body.cart-body {
+#cart-body {
     background-image: url("../images/Store7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
