@@ -4,14 +4,14 @@ module.exports = function email(data) {
 var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'robertbernardbrown@gmail.com',
+        user: 'standin@gmail.com',
         pass: 'kofurmqtdqekehop'
     }
 });
 
 const mailOptions = {
-    from: 'robertbernardbrown@gmail.com',
-    to: 'robertbernardbrown@gmail.com',
+    from: 'standin@gmail.com',
+    to: 'standin@gmail.com',
     subject: 'New Purchase',
     html: data
 };
