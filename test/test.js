@@ -1,8 +1,9 @@
-var express  = require("express");
-var chai     = require('chai');
+var express = require("express");
+var chai = require('chai');
 var chaiHttp = require('chai-http');
-var server   = require('../server.js');
-var should   = chai.should();
+var server = require('../server.js');
+const path = require("path");
+var should = chai.should();
 
 chai.use(chaiHttp);
 
@@ -46,4 +47,14 @@ describe('Contact Page', function () {
                 done();
             });
     });
+
+    // it('should return contact page html on /contact GET', function (done) {
+    //     chai.request(server)
+    //         .get('/contact')
+    //         .send(path.join(__dirname, "../public/assets/contact.html"))
+    //         .end(function (err, res) {
+    //             console.log(res);
+    //             res.should.have.status(200);
+    //         });
+    // });
 });

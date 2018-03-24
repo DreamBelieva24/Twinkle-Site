@@ -16,20 +16,20 @@ module.exports = function (app) {
     });
 
     app.get("/shop", function (req, res) {
-        db.Inventory.findAll({}).then(data => {
-            let allProductsForHandlebars = {
-                product: data
-            }
+        // db.Inventory.findAll({}).then(data => {
+            // let allProductsForHandlebars = {
+            //     product: data
+            // }
             // res.json(allProductsForHandlebars);
             res.sendFile(path.join(__dirname, "../public/assets/shop.html"));
-        })
+        // })
     });
 
     app.get("/shop/:id", function (req, res) {
         let param = req.params.id;
         db.Inventory.findOne({
             where: {
-                id: param
+                item_number: param
             }
         }).then( (data) => {
             let specificProduct = {
