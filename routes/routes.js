@@ -40,6 +40,7 @@ module.exports = function (app) {
     });
 
     app.post("/contact", function (req, res, next) {
+        console.log(req, res);
         db.CustomerInfo.create(req.body).then(data => {
             res.json(data);
         }).catch(errors => {
