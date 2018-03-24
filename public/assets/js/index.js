@@ -67,7 +67,7 @@ productPrices = []
 $(".addCart-purse").on("click", function() {
 
   productNames.push(document.getElementById("Octagon Purse").id)
-  productColors.push(document.getElementByClassName("chosen-color-purse").value)
+  productColors.push(document.getElementsByClassName("chosen-color-purse").value)
   productQuantities.push(parseInt(document.getElementById("chosen-quantity-purse").value))
   productPrices.push(parseInt(document.getElementById("54.00").id))
   
@@ -78,7 +78,7 @@ $(".addCart-purse").on("click", function() {
 $(".addCart-tag").on("click", function() {
 
   productNames.push(document.getElementById("Luggage Tag").id)
-  productColors.push(document.getElementByClassName("chosen-color-tag").value)
+  productColors.push(document.getElementsByClassName("chosen-color-tag").value)
   productQuantities.push(parseInt(document.getElementById("chosen-quantity-tag").value))
   productPrices.push(parseInt(document.getElementById("10.00").id))
   
@@ -89,7 +89,7 @@ $(".addCart-tag").on("click", function() {
 $(".addCart-ccholder").on("click", function() {
 
   productNames.push(document.getElementById("Credit Card Holder").id)
-  productColors.push(document.getElementByClassName("chosen-color-ccholder").value)
+  productColors.push(document.getElementsByClassName("chosen-color-ccholder").value)
   productQuantities.push(parseInt(document.getElementById("chosen-quantity-ccholder").value))
   productPrices.push(parseInt(document.getElementById("12.00").id))
   
