@@ -306,28 +306,20 @@
                 </div>
               </div>
               <div class="col 4 offset-s8" id="paypal-button-container"></div>
-              <div id="confirm" class="hidden">
+              
+              <div id="confirm" style="display: none;">
                 <div>Ship to:</div>
-                <div>
-                  <span id="recipient"></span>,
-                  <span id="line1"></span>,
-                  <span id="city"></span>
-                </div>
-                <div>
-                  <span id="state"></span>,
-                  <span id="zip"></span>,
-                  <span id="country"></span>
-                </div>
-
+                <div><span id="recipient"></span>, <span id="line1"></span>, <span id="city"></span></div>
+                <div><span id="state"></span>, <span id="zip"></span>, <span id="country"></span></div>
+            
                 <button id="confirmButton">Complete Payment</button>
-              </div>
-
-              <div id="thanks" class="hidden">
-                Thanks,
-                <span id="thanksname"></span>!
-              </div>
+            </div>
+            
+            <div id="thanks" style="display: none;">
+                Thanks, <span id="thanksname"></span>!
+            </div>
           </div>
-
+          
         </div>
       </div>
     </div>
