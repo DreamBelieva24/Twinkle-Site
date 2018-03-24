@@ -68,7 +68,7 @@ $(".addCart-purse").on("click", function() {
 
   productNames.push(document.getElementById("Octagon Purse").id)
   productColors.push(document.getElementsByClassName("chosen-color-purse").value)
-  // productQuantities.push(parseInt(document.getElementById("chosen-quantity-purse").value))
+  productQuantities.push(parseInt(document.getElementsByClassName("chosen-quantity-purse").value))
   // productPrices.push(parseInt(document.getElementById("54.00").id))
   
   displayCart();
@@ -79,7 +79,7 @@ $(".addCart-tag").on("click", function() {
 
   productNames.push(document.getElementById("Luggage Tag").id)
   productColors.push(document.getElementsByClassName("chosen-color-tag").value)
-  // productQuantities.push(parseInt(document.getElementById("chosen-quantity-tag").value))
+  // productQuantities.push(parseInt(document.getElementsByClassName("chosen-quantity-tag").value))
   // productPrices.push(parseInt(document.getElementById("10.00").id))
   
   displayCart();
