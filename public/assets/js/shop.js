@@ -31,14 +31,10 @@ $(document).ready(function () {
                     let selectionAndHeader = selectHeader.append(selection);
                     let selectBlock = productDiv.append(selectionAndHeader);
                     //display price of purchase
-                    let priceHeader = $("<h4>").text("Price:");
+                    let priceHeader = $("<h4>").text("Price per:");
                     let price = $("<p>").text("$" + data.product.price);
                     let priceBlock = productDiv.append(priceHeader.append(price));
                     $(".purse-choice").append(inventoryBlock);
-                    $(".purse-select-quant").on("change", function () {
-                        let chosenQuant = $(this).val();
-                        console.log(chosenQuant);
-                    })
                 } else {
                     let stockMessageDiv = $("<div>").addClass("purse-no-stock")
                     $(".purse-no-stock").empty();
@@ -82,7 +78,7 @@ $(document).ready(function () {
                     let selectionAndHeader = selectHeader.append(selection);
                     let selectBlock = productDiv.append(selectionAndHeader);
                     //display price of purchase
-                    let priceHeader = $("<h4>").text("Price:");
+                    let priceHeader = $("<h4>").text("Price per:");
                     let price = $("<p>").text("$" + data.product.price);
                     let priceBlock = productDiv.append(priceHeader.append(price));
                     $(".credit-choice").append(inventoryBlock);
@@ -129,7 +125,7 @@ $(document).ready(function () {
                     let selectionAndHeader = selectHeader.append(selection);
                     let selectBlock = productDiv.append(selectionAndHeader);
                     //display price of purchase
-                    let priceHeader = $("<h4>").text("Price:");
+                    let priceHeader = $("<h4>").text("Price per:");
                     let price = $("<p>").text("$" + data.product.price);
                     let priceBlock = productDiv.append(priceHeader.append(price));
                     $(".lug-choice").append(inventoryBlock);
