@@ -64,32 +64,74 @@ productColors = []
 productQuantities = []
 productPrices = []
 
- $(".addCart").on("click", function() {
+ $(".addCart-purse").on("click", function() {
 
-  productColors.push(document.getElementById("chosen-color").value)
-
-  console.log(productColors)
-
+  productNames.push(document.getElementById("Octagon Purse").id)
+  productColors.push(document.getElementById("chosen-color-purse").value)
+  productQuantities.push(parseInt(document.getElementById("chosen-quantity-purse").value))
+  productPrices.push(parseInt(document.getElementById("54.00").id))
+  
   displayCart();
  
+});
+
+$(".addCart-tag").on("click", function() {
+
+  productNames.push(document.getElementById("Luggage Tag").id)
+  productColors.push(document.getElementById("chosen-color-tag").value)
+  productQuantities.push(parseInt(document.getElementById("chosen-quantity-tag").value))
+  productPrices.push(parseInt(document.getElementById("10.00").id))
   
+  displayCart();
+ 
+});
+
+$(".addCart-ccholder").on("click", function() {
+
+  productNames.push(document.getElementById("Credit Card Holder").id)
+  productColors.push(document.getElementById("chosen-color-ccholder").value)
+  productQuantities.push(parseInt(document.getElementById("chosen-quantity-ccholder").value))
+  productPrices.push(parseInt(document.getElementById("12.00").id))
+  
+  displayCart();
+ 
 });
 
 function displayCart(){
 
-  cartdata = "<h2>Shopping Cart</h2><div class='col s3'><table class='striped'><thead><tr><th>Product Name</th><th>Color</th><th>Quantity</th><th>Price</th><tr><thead>";
+  cartdata = "<table class='striped' id='cart-table'><thead><tr><th>Product Name</th><th>Color</th><th>Quantity</th><th>Price</th><th>Total</th><th></th></tr></thead><tbody>";
+
+  total = 0;
 
   for (i=0; i<productColors.length; i++){
-    cartdata += "<tbody><tr>" + productColors[i] + " <button onclick='delElement(" + i + ")'>Remove Item</button></div>"
+    total += productPrices[i] * productQuantities[i];
+
+    cartdata += "<tr><td>" + productNames[i] + "</td><td>" + productColors[i] + "</td><td>" +
+    productQuantities[i] + "</td><td> $" + productPrices[i] + "</td><td> $" + productPrices[i] * 
+    productQuantities[i] + "</td><td><button onclick='delElement(" + i + ")'>Remove Item</button></td></tr>"
+
+
   }
-
-console.log(cartdata)
-
+  cartdata += "</tbody></table>"
   document.getElementById("container-cart").innerHTML = cartdata
 
+  $("#shipping").html("<strong>Shipping:</strong> $" + 6.95)
+  var tax = total * 0.07
+  var taxRound = tax.toFixed(2)
+  $("#tax").html("<strong>Tax:</strong> $" + taxRound)
+  
+  totalPrice = (total + 6.95 + tax);
+  totalPriceRound = totalPrice.toFixed(2);
+
+  $("#total-price").html("<strong>Total Price:</strong> $" + totalPriceRound)
+  
+  
 }
 
 function delElement(a){
   productColors.splice(a, 1)
+  productNames.splice(a, 1)
+  productQuantities.splice(a, 1)
+  productPrices.splice(a, 1)
   displayCart();
 }

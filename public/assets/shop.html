@@ -12,6 +12,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 </header>
 
 <body>
@@ -78,7 +79,7 @@
 
                   <div class="row">
                     <div class="col s6">
-                      <h4>Octagon Purses</h4>
+                      <h4 id="Octagon Purse">Octagon Purses</h4>
                       <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.0-9/22308601_1544750385613149_1284840514167237382_n.jpg?_nc_cat=0&oh=5e11efb5c9b267d736b2b1d0106a708e&oe=5B4923A5"
                         style="width:500px; height:500px;">
 
@@ -87,9 +88,9 @@
                       <label>
                         <h4>Select a Color</h4>
                       </label>
-                      <select id="color-chosen">
+                      <select id="chosen-color-purse">
                         <option value="" disabled selected>Select Color</option>
-                        <option value="6600aqua">Aqua</option>
+                        <option value="6600aqua" >Aqua</option>
                         <option value="6600blk">Black</option>
                         <option value="6600hotpink">Hot Pink</option>
                         <option value="6600leaf">Leaf</option>
@@ -111,7 +112,7 @@
                         <!-- <h4>Select a Quantity</h4> -->
                       </label>
                       <br>
-                      <select id="quantity-chosen">
+                      <select id="chosen-quantity-purse">
                         <option value="" disabled selected>Select Quantity</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -119,9 +120,9 @@
                       </select>
                       <br>
                       <br>
-                      <h5>Price: $54.00</h5>
+                      <h5 id="54.00">Price: $54.00</h5>
                       <br>
-                      <a class="waves-effect waves-light btn addCart">
+                      <a class="waves-effect waves-light btn addCart-purse">
                         <i class="material-icons right">shopping_cart</i>Add to Cart</a>
                       <br>
                       <br>
@@ -166,7 +167,7 @@
                 <div class="modal-content">
                   <div class="row">
                     <div class="col s6">
-                      <h4>Credit Card Holders</h4>
+                      <h4 id="Credit Card Holder">Credit Card Holders</h4>
                       <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t1.0-9/22728651_1559373074150880_4924485112930621536_n.jpg?oh=93575d9952a76163c1eee0390e37f10e&oe=5B2CF5B1"
                         style="width:500px; height:500px;">
 
@@ -175,7 +176,7 @@
                       <label>
                         <h4>Select a Color</h4>
                       </label>
-                      <select id="chosen-color">
+                      <select id="chosen-color-ccholder">
                         <option value="" disabled selected>Select Color</option>
                         <option value="7201aqua">Aqua</option>
                         <option value="7201blk">Black</option>
@@ -198,7 +199,7 @@
                         <!-- <h4>Select a Quantity</h4> -->
                       </label>
                       <br>
-                      <select>
+                      <select id="chosen-quantity-ccholder">
                         <option value="" disabled selected>Select Quantity</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -206,9 +207,9 @@
                       </select>
                       <br>
                       <br>
-                      <h5>Price: $12.00</h5>
+                      <h5 id="12.00">Price: $12.00</h5>
                       <br>
-                      <a class="waves-effect waves-light btn addCart">
+                      <a class="waves-effect waves-light btn addCart-ccholder">
                         <i class="material-icons right">shopping_cart</i>Add to Cart</a>
                       <br>
                       <br>
@@ -249,7 +250,7 @@
                   <div class="modal-content">
                     <div class="row">
                       <div class="col s6">
-                        <h4>Luggage Tags</h4>
+                        <h4 id="Luggage Tags">Luggage Tags</h4>
                         <img src="https://scontent-mia3-1.xx.fbcdn.net/v/t31.0-8/19238042_1439311749490347_3416898757404166265_o.jpg?_nc_cat=0&oh=bc7f85f73e1f249ebd369e7b77f9e01c&oe=5B489866"
                           style="width:500px; height:500px;">
 
@@ -261,7 +262,7 @@
                         </label>
 
 
-                        <select>
+                        <select id="chosen-color-tag">
 
                           <option value="6422aqua">Aqua</option>
                           <option value="'6422blk">Black</option>
@@ -284,7 +285,7 @@
                           <!-- <h4>Select a Quantity</h4> -->
                         </label>
                         <br>
-                        <select>
+                        <select id="chosen-quantity-tag">
                           <option value="" disabled selected>Select Quantity</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
@@ -292,7 +293,7 @@
                         </select>
                         <br>
                         <br>
-                        <h5>Price: $10.00</h5>
+                        <h5 id="10.00">Price: $10.00</h5>
                         <br>
                       </div>
 
@@ -309,8 +310,70 @@
         </div>
       </div>
     </div>
+    <div class="row">
+        <div class="col s8 offset-s3">
 
-    <div id="container-cart"></div>
+    
+            <div id="shopping-cart">
+                <h2>Shopping Cart</h2>
+                
+                    <div id="container-cart"></div>
+               
+
+                <div class="row">
+                    <div class="col s3 offset-s8">
+                        <div class="row">
+
+                        </div>
+                        <div class="row" id="shipping">
+                            <div class=>Shipping</div>
+                        </div>
+                        <div class="row" id="tax">
+                            <div class=>Tax</div>
+                        </div>
+                        <div class="row" id="total-price">
+                            <div class=>Total Price</div>
+                        </div>
+                    </div>
+                </div>
+                <h4>Shipping Address:</h4>
+
+
+                <div class="row">
+                    <form class="col s12 contact-form right-alert" id="contact">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="first_name" name="first_name" type="text">
+                                <label for="first_name">* First Name</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last_name" type="text" name="last_name">
+                                <label for="last_name">* Last Name</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="phone" type="text" name="phone">
+                                <label for="phone">* Phone</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="email" type="text" name="email">
+                                <label for="email">* Email</label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="address" type="text" name="address">
+                                <label for="address">* Address</label>
+                            </div>
+                        </div>
+                </div>
+                <div class="col 4 offset-s8" id="paypal-button-container"></div>
+            </div>
+        </div>
+    </div>
+    
 
 
   </main>
@@ -357,5 +420,97 @@
   </footer>
   <script src="assets/js/index.js"></script>
   <script src="assets/js/interactive.js"></script>
+  <script>
+
+
+
+
+      paypal.Button.render({
+
+      
+
+          env: 'production', // sandbox | production
+
+          style: {
+            label: 'buynow',
+            fundingicons: true, // optional
+            branding: true, // optional
+            size:  'small', // small | medium | large | responsive
+            shape: 'rect',   // pill | rect
+            color: 'gold'   // gold | blue | silve | black
+        },
+          // PayPal Client IDs - replace with your own
+          // Create a PayPal app: https://developer.paypal.com/developer/applications/create
+          client: {
+              sandbox: 'AZDxjDScFpQtjWTOUtWKbyN_bDt4OgqaF4eYXlewfBP4-8aqX3PiV8e1GWU6liB2CUXlkA59kJXE7M6R',
+              production: 'AUasYU_mFArJOPR2dACecn1ANjI7FhaAcQ6m2iUpMGfL1FqdjfEbjNP9FxQdeQv4wZwqqbsqWueynecb'
+          },
+
+          // Show the buyer a 'Pay Now' button in the checkout flow
+          commit: true,
+
+          // payment() is called when the button is clicked
+          payment: function (data, actions) {
+
+              // Make a call to the REST api to create the payment
+              return actions.payment.create({
+                  payment: {
+                      transactions: [
+                          {
+                              amount: { total: totalPriceRound, currency: 'USD' }
+                          }
+                      ]
+                  }
+              });
+          },
+
+          // onAuthorize() is called when the buyer approves the payment
+          onAuthorize: function(data, actions) {
+
+// Get the payment details
+
+return actions.payment.get().then(function(data) {
+
+    // Display the payment details and a confirmation button
+
+    var shipping = data.payer.payer_info.shipping_address;
+
+    document.querySelector('#recipient').innerText = shipping.recipient_name;
+    document.querySelector('#line1').innerText     = shipping.line1;
+    document.querySelector('#city').innerText      = shipping.city;
+    document.querySelector('#state').innerText     = shipping.state;
+    document.querySelector('#zip').innerText       = shipping.postal_code;
+    document.querySelector('#country').innerText   = shipping.country_code;
+
+    document.querySelector('#paypal-button-container').style.display = 'none';
+    document.querySelector('#confirm').style.display = 'block';
+
+    // Listen for click on confirm button
+
+    document.querySelector('#confirmButton').addEventListener('click', function() {
+
+        // Disable the button and show a loading message
+
+        document.querySelector('#confirm').innerText = 'Loading...';
+        document.querySelector('#confirm').disabled = true;
+
+        // Execute the payment
+
+        return actions.payment.execute().then(function() {
+
+            // Show a thank-you note
+
+            document.querySelector('#thanksname').innerText = shipping.recipient_name;
+
+            document.querySelector('#confirm').style.display = 'none';
+            document.querySelector('#thanks').style.display = 'block';
+        });
+    });
+});
+}
+
+}, '#paypal-button-container');
+
+  </script>
 </body>
 </html>
