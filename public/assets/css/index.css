@@ -13,9 +13,10 @@ color: #00b8d4;
 
 }
 
-/* .select{
-    color:
-} */
+h5{
+   color: black;
+    font-size: 20px !important; 
+}
 .waves-effect {
     font-size: 28px;
 }
