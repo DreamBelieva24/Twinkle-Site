@@ -68,7 +68,7 @@ $(".addCart-purse").on("click", function() {
 
   productNames.push(document.getElementById("Octagon Purse").id)
   productColors.push(document.getElementById("purse-select").value)
-  productQuantities.push(parseInt(document.getElementsByClassName("chosen-quantity-purse").value))
+  productQuantities.push(parseInt(document.getElementById("chosen-quantity-purse").value))
   // productPrices.push(parseInt(document.getElementById("54.00").id))
   
   displayCart();
