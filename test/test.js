@@ -4,6 +4,7 @@ var chaiHttp = require('chai-http');
 var server = require('../server.js');
 const path = require("path");
 var should = chai.should();
+var expect = chai.expect;
 
 chai.use(chaiHttp);
 
@@ -79,7 +80,66 @@ describe('Contact Page Routing', function () {
         chai.request(server)
             .get('/contact')
             .end(function (err, res) {
-                console.log(res);
+                res.should.have.status(200);
+                done();
+            });
+    });
+});
+
+describe('Home Page Routing', function () {
+    it('should return home page html on / GET', function (done) {
+        chai.request(server)
+            .get('/')
+            .end(function (err, res) {
+                res.should.have.status(200);
+                done();
+            });
+    });
+});
+
+describe('Cart Page Routing', function () {
+    it('should return home page html on /cart GET', function (done) {
+        chai.request(server)
+            .get('/cart')
+            .end(function (err, res) {
+                res.should.have.status(200);
+                done();
+            });
+    });
+});
+
+describe('Shop Page Routing', function () {
+    it('should return home page html on /shop GET', function (done) {
+        chai.request(server)
+            .get('/shop')
+            .end(function (err, res) {
+                res.should.have.status(200);
+                done();
+            });
+    });
+    it('should return specific item info on /shop/:param GET', function (done) {
+        chai.request(server)
+            .get('/shop/7201aqua')
+            .end(function (err, res) {
+                res.body.should.be.an('object');
+                res.body.product.should.be.an('object');
+                res.body.product.should.have.property('id');
+                res.body.product.should.have.property('item_name');
+                res.body.product.should.have.property('description');
+                res.body.product.should.have.property('item_number');
+                res.body.product.should.have.property('in_stock');
+                res.body.product.should.have.property('price');
+                res.should.have.status(200);
+                done();
+            });
+    });
+    it('should return null object info on /shop/:param GET for invalid item number', function (done) {
+        chai.request(server)
+            .get('/shop/5')
+            .end(function (err, res) {
+                res.body.should.be.an('object');
+                res.body.should.have.property('product');
+                expect(res.body.product).to.be.null;
                 res.should.have.status(200);
                 done();
             });
