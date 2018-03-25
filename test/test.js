@@ -13,7 +13,7 @@ before(done => {
     });
 });
 
-describe('Contact Page', function () {
+describe('Contact Page Routing', function () {
     it('should add a SINGLE contact with proper properties on /contact POST', function (done) {
         chai.request(server)
             .post('/contact')
@@ -21,7 +21,7 @@ describe('Contact Page', function () {
                 'first_name': 'Test',
                 'last_name': 'Test',
                 'address': 'Test address',
-                'email': 'Test email',
+                'email': 'Test@test.com',
                 'phone': '999-999-9999',
                 'subject': 'test',
                 'message': 'test message'
@@ -40,7 +40,7 @@ describe('Contact Page', function () {
                 res.body.first_name.should.equal('Test');
                 res.body.last_name.should.equal('Test');
                 res.body.address.should.equal('Test address');
-                res.body.email.should.equal('Test email');
+                res.body.email.should.equal('Test@test.com');
                 res.body.phone.should.equal('999-999-9999');
                 res.body.subject.should.equal('test');
                 res.body.message.should.equal('test message');
@@ -48,13 +48,40 @@ describe('Contact Page', function () {
             });
     });
 
-    // it('should return contact page html on /contact GET', function (done) {
-    //     chai.request(server)
-    //         .get('/contact')
-    //         .send(path.join(__dirname, "../public/assets/contact.html"))
-    //         .end(function (err, res) {
-    //             console.log(res);
-    //             res.should.have.status(200);
-    //         });
-    // });
+    it('should return an error object with improper contact info on /contact POST', function (done) {
+        chai.request(server)
+            .post('/contact')
+            .send({
+                'first_name': '765876',
+                'last_name': '76567',
+                'address': 'Test address',
+                'email': 'Test email',
+                'phone': '999-999-jhb',
+                'subject': '',
+                'message': ''
+            })
+            .end(function (err, res) {
+                res.body.should.be.an('object');
+                res.body.name.should.equal('SequelizeValidationError');
+                res.body.errors.should.be.an('array');
+                res.body.errors[0].should.have.property('message');
+                res.body.errors[0].should.have.property('type');
+                res.body.errors[0].should.have.property('path');
+                res.body.errors[0].should.have.property('value');
+                res.body.errors[0].should.have.property('origin');
+                res.body.errors[0].should.have.property('instance');
+                res.body.errors[0].should.have.property('message');
+                done();
+            });
+    });
+
+    it('should return contact page html on /contact GET', function (done) {
+        chai.request(server)
+            .get('/contact')
+            .end(function (err, res) {
+                console.log(res);
+                res.should.have.status(200);
+                done();
+            });
+    });
 });
