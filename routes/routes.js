@@ -41,9 +41,11 @@ module.exports = function (app) {
     });
 
     app.post("/contact", function (req, res, next) {
+        //sends an email with contact info
+        let string = JSON.stringify(req.body);
+        email(string);
+        //creates db entry with contact info
         db.CustomerInfo.create(req.body).then(data => {
-            let string = JSON.stringify(req.body);
-            email(string);
             res.json(data);
         }).catch(errors => {
             res.json(errors);

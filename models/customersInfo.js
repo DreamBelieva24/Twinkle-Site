@@ -33,6 +33,7 @@ var CustomerInfo = sequelize.define("CustomerInfo", {
     allowNull: false,
     validate: {
       notEmpty: true,
+      isEmail: true
     }
   },
   phone: {
