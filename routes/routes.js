@@ -7,7 +7,6 @@ module.exports = function (app) {
     let homeGetRoute = function (req, res) {
         res.sendFile(path.join(__dirname, "../public/assets/index.html"));
         res.status(200);
-        console.log(res.statusCode);
     };
     let contactGetRoute = function (req, res) {
         res.sendFile(path.join(__dirname, "../public/assets/contact.html"));
@@ -37,6 +36,7 @@ module.exports = function (app) {
                 product: data
             }
             res.json(specificProduct);
+            console.log(specificProduct);
         })
     }
     let contactPostRoute = function (req, res) {
