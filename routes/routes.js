@@ -41,13 +41,11 @@ module.exports = function (app) {
     });
 
     app.post("/contact", function (req, res, next) {
-        console.log(req, res);
         db.CustomerInfo.create(req.body).then(data => {
             let string = JSON.stringify(req.body);
             email(string);
-            // res.json(data);
+            res.json(data);
         }).catch(errors => {
-            console.log(errors);
             res.json(errors);
         })
     })
