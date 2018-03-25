@@ -4,29 +4,29 @@ const email = require("../public/assets/js/email");
 
 module.exports = function (app) {
 
-    app.get("/", (req, res) => {
+    let homeGetRoute = function (req, res) {
         res.sendFile(path.join(__dirname, "../public/assets/index.html"));
-    });
-    
-    app.get("/contact", (req, res) => {
+        res.status(200);
+        console.log(res.statusCode);
+    };
+    let contactGetRoute = function (req, res) {
         res.sendFile(path.join(__dirname, "../public/assets/contact.html"));
-    });
-    
-    app.get("/cart", (req, res) => {
+        res.status(200);
+    };
+    let cartGetRoute = function (req, res) {
         res.sendFile(path.join(__dirname, "../public/assets/cart.html"));
-    });
-
-    app.get("/shop", function (req, res) {
+        res.status(200);
+    };
+    let shopGetRoute = function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/assets/shop.html"));
         // db.Inventory.findAll({}).then(data => {
             // let allProductsForHandlebars = {
             //     product: data
             // }
             // res.json(allProductsForHandlebars);
-            res.sendFile(path.join(__dirname, "../public/assets/shop.html"));
         // })
-    });
-
-    app.get("/shop/:id", function (req, res) {
+    }
+    let shopParamGetRoute = function (req, res) {
         let param = req.params.id;
         db.Inventory.findOne({
             where: {
@@ -38,9 +38,8 @@ module.exports = function (app) {
             }
             res.json(specificProduct);
         })
-    });
-
-    app.post("/contact", function (req, res, next) {
+    }
+    let contactPostRoute = function (req, res) {
         //sends an email with contact info
         let string = JSON.stringify(req.body);
         email(string);
@@ -50,5 +49,12 @@ module.exports = function (app) {
         }).catch(errors => {
             res.json(errors);
         })
-    })
+    }
+
+    app.get("/", homeGetRoute);
+    app.get("/contact", contactGetRoute);
+    app.get("/cart", cartGetRoute);
+    app.get("/shop", shopGetRoute);
+    app.get("/shop/:id", shopParamGetRoute);
+    app.post("/contact", contactPostRoute)
 }

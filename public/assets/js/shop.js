@@ -23,7 +23,7 @@ $(document).ready(function () {
                     let selectHeader = $("<h5>").text("Order quantity:")
                     let selectTag = $("<select>").addClass("select-quant waves-effect waves-cyan btn-flat btn-small #00b8d4 black-text").attr("data-target", 'dropdown1').attr("id", "chosen-quantity-purse");
                     let optionTag;
-                    for (let i = 0; i <= stock; i++) {
+                    for (let i = 1; i <= stock; i++) {
                         optionTag = $("<option>").text(i).addClass("purse" + i).attr("value", i);
                         selectTag.append(optionTag);
                     }

@@ -75,13 +75,13 @@ describe('Contact Page Routing', function () {
             });
     });
 
-    // it('should return contact page html on /contact GET', function (done) {
-    //     chai.request(server)
-    //         .get('/contact')
-    //         .send(path.join(__dirname, "../public/assets/contact.html"))
-    //         .end(function (err, res) {
-    //             console.log(res);
-    //             res.should.have.status(200);
-    //         });
-    // });
+    it('should return contact page html on /contact GET', function (done) {
+        chai.request(server)
+            .get('/contact')
+            .end(function (err, res) {
+                console.log(res);
+                res.should.have.status(200);
+                done();
+            });
+    });
 });
