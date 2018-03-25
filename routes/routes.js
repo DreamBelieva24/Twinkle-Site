@@ -36,7 +36,6 @@ module.exports = function (app) {
                 product: data
             }
             res.json(specificProduct);
-            console.log(specificProduct);
         })
     }
     let contactPostRoute = function (req, res) {

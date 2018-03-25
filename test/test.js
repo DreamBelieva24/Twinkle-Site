@@ -137,7 +137,6 @@ describe('Shop Page Routing', function () {
         chai.request(server)
             .get('/shop/5')
             .end(function (err, res) {
-                console.log(res.body);
                 res.body.should.be.an('object');
                 res.body.should.have.property('product');
                 expect(res.body.product).to.be.null;
