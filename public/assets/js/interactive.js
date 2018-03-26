@@ -36,7 +36,6 @@ $(document).ready(function () {
           type: "POST",
           data: $(form).serialize(),
           success: function (res) {
-            console.log(res);
             if (!res.errors) {
               $('.contact-form').hide();
               $('.modal-content').empty();
