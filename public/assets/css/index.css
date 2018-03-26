@@ -35,9 +35,6 @@ input {
     
 }
 
-
-
-
 .form-container {
     background-color: rgba(252, 252, 244, 0.9);
     color: black;
@@ -62,7 +59,6 @@ body.cart-body {
 }
 #logo {
     padding-top: 5px;
-    /* margin-top: 10px; */
     margin-left: 40px;
 }
 
@@ -71,23 +67,31 @@ nav ul a.btn-large {
 }
 
 .carousel .carousel-item {
-
     width:500px !important;
     height:300px !important;
-    
 }
 
+.menuList {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center
+}
 
-/* .carousel {
-    /* margin-top: -10px;
-
-   
-    /* height:500px; */
-    /* margin-bottom: 20px;  */
-/* } */
+.material-icons {
+    color: #68c4c2;
+}
 
 .error {
     color: #c00f53;
+}
+
+.sidenav {
+    background-color: #fce4ec;
+}
+
+#mobile-demo {
+    background-color: #fce4ec;
 }
 
 @media only screen and (min-width: 601px) {
@@ -96,6 +100,5 @@ nav ul a.btn-large {
     }
    .brand-logo {
        max-width: 50%;
-       height: auto
    }
 }
