@@ -3,18 +3,18 @@ $(document).ready(function () {
 });
 
 // Next slide
-$('.carousel').carousel('next');
-$('.carousel').carousel('next', 3); // Move next n times.
+// $('.carousel').carousel('next');
+// $('.carousel').carousel('next', 3); // Move next n times.
 
 // Previous slide
-$('.carousel').carousel('prev');
-$('.carousel').carousel('prev', 4); // Move prev n times.
+// $('.carousel').carousel('prev');
+// $('.carousel').carousel('prev', 4); // Move prev n times.
 
 // Set to nth slide
-$('.carousel').carousel('set', 4);
+// $('.carousel').carousel('set', 4);
 
 // Destroy carousel
-$('.carousel').carousel('destroy');
+// $('.carousel').carousel('destroy');
 
 
 
@@ -29,8 +29,11 @@ $(document).ready(function(){
   // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
   $('.modal').modal();
 });
-     
 
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+  // $('.button-collapse').sideNav()
+});
 
 
   // Or with jQuery
@@ -55,9 +58,9 @@ $(document).ready(function(){
     }
   );
   
-  $(document).ready(function() {
-    $('select').material_select();
- });
+//   $(document).ready(function() {
+//     $('select').material_select();
+//  });
 
 productNames = []
 productColors = []
