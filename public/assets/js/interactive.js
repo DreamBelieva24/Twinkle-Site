@@ -1,4 +1,7 @@
 $(document).ready(function () {
+  $('.carousel').carousel();
+  $('.modal').modal();
+  $('.sidenav').sidenav();
   $("form#contact")
     .validate({
       errorElement: "div",

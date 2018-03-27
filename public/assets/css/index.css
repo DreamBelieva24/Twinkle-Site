@@ -9,14 +9,14 @@ main {
 }
 
 h4 {
-color: #00b8d4;
-
+    color: #00b8d4;
 }
 
-h5{
-   color: black;
-    font-size: 20px !important; 
+h5 {
+    color: black;
+    font-size: 20px !important;
 }
+
 .waves-effect {
     font-size: 28px;
 }
@@ -24,15 +24,12 @@ h5{
 input {
     color: black;
     font-weight: bolder;
+}
 
-   } 
-
-   #container-cart{
-    background-color: rgba(252, 252, 244, 0.9) ;
-    
+#container-cart {
+    background-color: rgba(252, 252, 244, 0.9);
     color: black;
     font-weight: bolder;
-    
 }
 
 .form-container {
@@ -52,11 +49,13 @@ body.cart-body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 #cart-body {
     background-image: url("../images/Store7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 #logo {
     padding-top: 5px;
     margin-left: 40px;
@@ -67,8 +66,8 @@ nav ul a.btn-large {
 }
 
 .carousel .carousel-item {
-    width:500px !important;
-    height:300px !important;
+    width: 500px !important;
+    height: 300px !important;
 }
 
 .menuList {
@@ -98,7 +97,7 @@ nav ul a.btn-large {
     nav {
         height: 56px;
     }
-   .brand-logo {
-       max-width: 50%;
-   }
+    .brand-logo {
+        max-width: 50%;
+    }
 }
