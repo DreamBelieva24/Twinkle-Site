@@ -77,6 +77,11 @@ nav ul a.btn-large {
     text-align: center
 }
 
+.resizeMenu {
+    text-align: center;
+    vertical-align: middle
+}
+
 .material-icons {
     color: #68c4c2;
 }

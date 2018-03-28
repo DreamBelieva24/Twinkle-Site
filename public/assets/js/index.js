@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $('.carousel').carousel();
   $('.modal').modal();
-  $('.sidenav').sidenav();
+  $('.sidenav').sideNav();
 
   $('.dropdown-button').dropdown({
     inDuration: 300,
