@@ -36,7 +36,17 @@ input {
 }
 
 
+.menuList {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center
+}
 
+.resizeMenu {
+    text-align: center;
+    vertical-align: middle
+}
 
 .form-container {
     background-color: rgba(252, 252, 244, 0.9);
