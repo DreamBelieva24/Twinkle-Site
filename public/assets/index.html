@@ -8,46 +8,43 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="assets/css/index.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </header>
 
 <body>
   <main>
 
-    <nav class="nav-extended">
-
+    <nav style="height:100px;">
       <div class="nav-wrapper l#fce4ec pink lighten-5">
-
-        <div id="logo">
-          <img class="brand-logo responsive-img hide-on-med-and-down" src="/assets/images/twinklelogo.jpg" style="width:300px; height:150px;">>
-        </div>
-
-        <!-- <div class="space"></div> -->
-        <ul id="nav-mobile" class="right">
-
+        <a href="/" class="brand-logo">
+          <img src="/assets/images/twinklelogo.jpg" style="width:200px; height:100px;">
+        </a>
+        <ul class="right hide-on-med-and-down menu">
           <li>
-            <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/">Home</a>
+            <a class="menuList waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/">Home</a>
           </li>
           <li>
-            <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/shop">Shop</a>
+            <a class="menuList waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/shop">Shop</a>
           </li>
           <li>
-            <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/contact">Contact Us</a>
+            <a class="menuList waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/contact">Contact</a>
           </li>
-         
         </ul>
-        <div class="nav-content">
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-
-
-        </div>
       </div>
-
+    </nav>
+    <nav class="show-on-med-and-down hide-on-large-only l#fce4ec pink lighten-5">
+      <div class="nav-content">
+        <ul class="tabs tabs-transparent">
+          <li class="tab">
+            <a class="#00b8d4 cyan-text lighten-4-text" href="/" target="_self">Home</a>
+          </li>
+          <li class="tab">
+            <a class="#00b8d4 cyan-text lighten-4-text" href="/shop" target="_self">Shop</a>
+          </li>
+          <li class="tab">
+            <a class="#00b8d4 cyan-text lighten-4-text" href="/contact" target="_self">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <div class="carousel  height=600px">
@@ -131,6 +128,8 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="assets/js/index.js"></script>
   <script src="assets/js/interactive.js"></script>
 </body>
