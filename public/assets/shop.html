@@ -5,51 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Online Ordering</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"> -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link type="text/css" rel="stylesheet" href="assets/css/index.css">
-
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <script src="https://www.paypalobjects.com/api/checkout.js"></script>
-
 </header>
 
 <body>
   <main>
-    <nav class="nav-extended">
+    <nav style="height:100px;">
       <div class="nav-wrapper l#fce4ec pink lighten-5">
-        <div id="logo">
-          <img class="brand-logo hide-on-med-and-down" class="left responsive-img;" src="/assets/images/twinklelogo.jpg" style="width:300px; height:150px;">>
-        </div>
-
-        <!-- <div class="space"></div> -->
-        <ul id="nav-mobile" class="right">
-
+        <a href="/" class="brand-logo">
+          <img src="/assets/images/twinklelogo.jpg" style="width:200px; height:100px;">
+        </a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down menu">
           <li>
-            <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/">Home</a>
+            <a class="menuList waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/">Home</a>
           </li>
           <li>
-            <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/shop">Shop</a>
+            <a class="menuList waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/shop">Shop</a>
           </li>
           <li>
-            <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/contact">Contact Us</a>
+            <a class="menuList waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/contact">Contact</a>
           </li>
-         
         </ul>
-        <div class="nav-content">
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-
-
-        </div>
       </div>
-
     </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+      <li>
+        <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/">Home</a>
+      </li>
+      <li>
+        <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/shop">Shop</a>
+      </li>
+      <li>
+        <a class="waves-effect waves-cyan btn-flat #00b8d4 cyan-text lighten-4-text" href="/contact">Contact</a>
+      </li>
+    </ul>
 
 
 
@@ -302,20 +298,29 @@
                 </div>
               </div>
               <div class="col 4 offset-s8" id="paypal-button-container"></div>
-              
+
               <div id="confirm" style="display: none;">
                 <div>Ship to:</div>
-                <div><span id="recipient"></span>, <span id="line1"></span>, <span id="city"></span></div>
-                <div><span id="state"></span>, <span id="zip"></span>, <span id="country"></span></div>
-            
+                <div>
+                  <span id="recipient"></span>,
+                  <span id="line1"></span>,
+                  <span id="city"></span>
+                </div>
+                <div>
+                  <span id="state"></span>,
+                  <span id="zip"></span>,
+                  <span id="country"></span>
+                </div>
+
                 <button id="confirmButton">Complete Payment</button>
-            </div>
-            
-            <div id="thanks" style="display: none;">
-                Thanks, <span id="thanksname"></span>!
-            </div>
+              </div>
+
+              <div id="thanks" style="display: none;">
+                Thanks,
+                <span id="thanksname"></span>!
+              </div>
           </div>
-          
+
         </div>
       </div>
     </div>
@@ -364,13 +369,12 @@
       </div>
     </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="https://www.paypalobjects.com/api/checkout.js"></script>
   <script src="assets/js/index.js"></script>
   <script src="assets/js/shop.js"></script>
   <script>
-
-
-
-
     paypal.Button.render({
 
 
@@ -382,8 +386,8 @@
         fundingicons: true, // optional
         branding: true, // optional
         size: 'small', // small | medium | large | responsive
-        shape: 'rect',   // pill | rect
-        color: 'gold'   // gold | blue | silve | black
+        shape: 'rect', // pill | rect
+        color: 'gold' // gold | blue | silve | black
       },
       // PayPal Client IDs - replace with your own
       // Create a PayPal app: https://developer.paypal.com/developer/applications/create
@@ -401,11 +405,12 @@
         // Make a call to the REST api to create the payment
         return actions.payment.create({
           payment: {
-            transactions: [
-              {
-                amount: { total: totalPriceRound, currency: 'USD' }
+            transactions: [{
+              amount: {
+                total: totalPriceRound,
+                currency: 'USD'
               }
-            ]
+            }]
           }
         });
       },
@@ -456,7 +461,6 @@
       }
 
     }, '#paypal-button-container');
-
   </script>
 </body>
 
